@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { NAV_ITEMS } from '../constants';
 import ThemeToggle from './ThemeToggle';
 import Button from './Button';
@@ -88,34 +88,27 @@ const Header: React.FC = () => {
       </div>
 
       {/* --- MENU EXPANSÍVEL MOBILE --- */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            // Animação de abrir/fechar o menu (altura: 0 -> auto)
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-dark-secondary border-b border-slate-200 dark:border-white/5 overflow-hidden shadow-xl"
-          >
-            <nav className="flex flex-col p-6 gap-4">
-              {NAV_ITEMS.map((item) => (
-                <a 
-                  key={item.name}
-                  href={item.href}
-                  // Fecha o menu automaticamente ao clicar em um link
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white py-2 border-b border-slate-100 dark:border-white/5"
-                >
-                  {item.name}
-                </a>
-              ))}
-              <Button href="https://github.com/Euuuller" className="mt-4 w-full">
-                Ver GitHub
-              </Button>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Removido AnimatePresence/framer-motion para evitar conflitos em mobile */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white dark:bg-dark-secondary border-b border-slate-200 dark:border-white/5 shadow-xl transition-all duration-300 ease-in-out">
+          <nav className="flex flex-col p-6 gap-4">
+            {NAV_ITEMS.map((item) => (
+              <a 
+                key={item.name}
+                href={item.href}
+                // Fecha o menu automaticamente ao clicar em um link
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-slate-600 dark:text-gray-300 hover:text-primary dark:hover:text-white py-2 border-b border-slate-100 dark:border-white/5"
+              >
+                {item.name}
+              </a>
+            ))}
+            <Button href="https://github.com/Euuuller" className="mt-4 w-full">
+              Ver GitHub
+            </Button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
