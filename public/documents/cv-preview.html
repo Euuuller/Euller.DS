@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Currículo - Euller Duarte</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #0f172a; /* Slate 900 */
+      line-height: 1.5;
+      margin: 0;
+      padding: 40px;
+      max-width: 210mm;
+      margin: 0 auto;
+      background: white;
+    }
+
+    .header {
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    
+    .name {
+      font-size: 28px;
+      font-weight: 800;
+      color: #4f46e5; /* NOVO INDIGO 600 */
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .role {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .contact-item { display: flex; align-items: center; gap: 6px; }
+    .contact-icon { opacity: 0.7; color: #4f46e5; }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      border-bottom: 2px solid #e0e7ff; /* Indigo 100 */
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      margin-top: 32px;
+      color: #0f172a;
+      letter-spacing: 0.05em;
+    }
+
+    .section-title:first-child { margin-top: 0; }
+
+    p {
+      font-size: 13px;
+      margin-bottom: 12px;
+      text-align: justify;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    .project-item, .exp-item, .edu-item { margin-bottom: 24px; }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .item-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: #0f172a;
+    }
+
+    .item-subtitle {
+      font-size: 12px;
+      color: #4f46e5; /* Indigo 600 */
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    
+    .item-date {
+      font-size: 12px;
+      color: #64748b;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .tech-list { list-style: none; padding: 0; margin: 0; }
+    .tech-category { margin-bottom: 16px; }
+
+    .tech-cat-name {
+      font-weight: 700;
+      font-size: 13px;
+      display: block;
+      margin-bottom: 4px;
+      color: #1e293b;
+    }
+
+    .tech-items {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.4;
+    }
+
+    ul.bullets {
+      margin: 8px 0 12px 18px;
+      padding: 0;
+      font-size: 13px;
+      color: #475569;
+    }
+    
+    ul.bullets li { margin-bottom: 6px; padding-left: 4px; }
+    ul.bullets li::marker { color: #4f46e5; }
+
+    @media print {
+      body { padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      @page { margin: 15mm; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="name">Euller dos Santos Rodrigues Duarte</div>
+    <div class="role">Analista de Dados & Estudante de Engenharia Elétrica</div>
+    <div class="contact-info">
+      <span class="contact-item"><span class="contact-icon">📍</span> Açailândia - MA, Brasil</span>
+      <span class="contact-item"><span class="contact-icon">✉️</span> euller.santos.duarte@gmail.com</span>
+      <span class="contact-item"><span class="contact-icon">📞</span> +55 (99) 99216-8287</span>
+      <span class="contact-item"><span class="contact-icon">🔗</span> linkedin.com/in/euuuller</span>
+      <span class="contact-item"><span class="contact-icon">🐙</span> github.com/Euuuller</span>
+    </div>
+  </div>
+
+  <div class="main-grid">
+    <div class="left-col">
+      <div class="section-title">Resumo Profissional</div>
+      <p>
+        Graduando em Engenharia Elétrica pelo IFMA com forte especialização em Análise de Dados. Possuo experiência prática no desenvolvimento de soluções data-driven utilizando Python, SQL e Power BI. Tenho um histórico comprovado em projetos de análise de comportamento de clientes (RFM), previsão de demanda e criação de dashboards executivos para suporte à tomada de decisão. Busco oportunidades para aplicar conhecimentos de estatística, machine learning e visualização de dados em problemas reais de negócio.
+      </p>
+
+      <div class="section-title">Projetos em Destaque</div>
+      
+      <div class="project-item">
+        <div class="item-title">Segmentação de Clientes (RFM)</div>
+        <div class="item-subtitle">Python, Pandas, Power BI</div>
+        <p>Desenvolvimento de algoritmo de clusterização para classificar base de 1.5k clientes. Identificou 5 perfis de consumo distintos baseados em Recência, Frequência e Valor, permitindo estratégias de marketing personalizadas.</p>
+      </div>
+
+      <div class="project-item">
+        <div class="item-title">Dashboard Gerencial de Vendas</div>
+        <div class="item-subtitle">Power BI, DAX, SQL</div>
+        <p>Criação de painel interativo conectado a banco de dados SQL. Monitoramento de KPIs em tempo real, análise geográfica de vendas e comparativo YoY (Year over Year), otimizando a visão estratégica da diretoria.</p>
+      </div>
+
+      <div class="project-item">
+        <div class="item-title">Previsão de Demanda com Machine Learning</div>
+        <div class="item-subtitle">Python, Prophet, Scikit-learn</div>
+        <p>Implementação de modelo de séries temporais para forecasting de vendas. Atingiu MAPE (Erro Percentual Absoluto Médio) de apenas 12% nas previsões de 30 dias, auxiliando na redução de excesso de estoque.</p>
+      </div>
+
+      <div class="section-title">Experiência Acadêmica</div>
+      <div class="exp-item">
+        <div class="item-header">
+          <span class="item-title">Instituto Federal do Maranhão (IFMA)</span>
+          <span class="item-date">2022 - Presente</span>
+        </div>
+        <div class="item-subtitle" style="color: #64748b; font-style: italic; font-weight: 500;">Pesquisador Junior & Monitoria</div>
+        <ul class="bullets">
+          <li>Desenvolvimento de scripts em Python para automação de coleta de dados de sensores.</li>
+          <li>Análise estatística de dados experimentais em laboratório de circuitos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right-col">
+      <div class="section-title">Educação</div>
+      <div class="edu-item">
+        <div class="item-title">Bacharelado em Eng. Elétrica</div>
+        <div class="item-subtitle" style="color: #475569; font-weight: 500;">IFMA - Campus Açailândia</div>
+        <div class="item-date">Previsão de conclusão: 2026</div>
+      </div>
+
+      <div class="section-title">Habilidades Técnicas</div>
+      <div class="tech-list">
+        <div class="tech-category">
+          <span class="tech-cat-name">Linguagens</span>
+          <span class="tech-items">Python, SQL, R, C++</span>
+        </div>
+        <div class="tech-category">
+          <span class="tech-cat-name">Análise de Dados</span>
+          <span class="tech-items">Pandas, NumPy, Excel Avançado</span>
+        </div>
+        <div class="tech-category">
+          <span class="tech-cat-name">Visualização</span>
+          <span class="tech-items">Power BI (DAX), Tableau, Matplotlib</span>
+        </div>
+        <div class="tech-category">
+          <span class="tech-cat-name">Machine Learning</span>
+          <span class="tech-items">Scikit-learn, TensorFlow, Prophet</span>
+        </div>
+        <div class="tech-category">
+          <span class="tech-cat-name">Ferramentas</span>
+          <span class="tech-items">Git, Docker, Jupyter Notebook</span>
+        </div>
+      </div>
+
+      <div class="section-title">Idiomas</div>
+      <div class="tech-list">
+        <div class="tech-category">
+          <span class="tech-cat-name">Português</span>
+          <span class="tech-items">Nativo</span>
+        </div>
+        <div class="tech-category">
+          <span class="tech-cat-name">Inglês</span>
+          <span class="tech-items">Intermediário (Leitura técnica)</span>
+        </div>
+      </div>
+
+      <div class="section-title">Soft Skills</div>
+      <ul class="bullets" style="margin-left: 0; list-style-position: inside;">
+        <li>Pensamento Analítico</li>
+        <li>Resolução de Problemas</li>
+        <li>Comunicação de Dados</li>
+        <li>Trabalho em Equipe</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    // Sugere impressão ao abrir
+    window.onload = function() {
+      // window.print(); // Comentado para não atrapalhar a visualização inicial
+    }
+  </script>
+</body>
+</html>
