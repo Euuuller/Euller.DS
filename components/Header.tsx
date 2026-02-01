@@ -30,13 +30,14 @@ const Header: React.FC = () => {
       // Se está no topo (isScrolled false): fundo transparente
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/80 dark:bg-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-white/5 py-4 shadow-sm dark:shadow-none' 
+          ? 'bg-white/95 dark:bg-dark/95 md:bg-white/80 md:dark:bg-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-white/5 py-4 shadow-sm dark:shadow-none' 
           : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* LOGO */}
         <a href="#" className="text-2xl font-display font-bold text-slate-900 dark:text-white flex items-center gap-1">
+          <span className="text-primary mr-1">&gt;_</span>
           Euller<span className="text-primary">.DS</span>
         </a>
 

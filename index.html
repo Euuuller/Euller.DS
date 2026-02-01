@@ -1,90 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Euller.DS | Cientista de Dados</title>
-    <meta name="description" content="Portfólio de Euller dos Santos Rodrigues Duarte - Cientista de Dados e Engenheiro Eletricista em formação." />
+    <meta
+      content="Portfólio de Euller dos Santos Rodrigues Duarte - Cientista de Dados e Engenheiro Eletricista em formação."
+    />
     
+    <!-- Favicon: Símbolo >_ (Terminal Prompt) em SVG -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230f172a%22/><text x=%2250%22 y=%2262%22 font-family=%22monospace%22 font-weight=%22bold%22 font-size=%2250%22 fill=%22%236366f1%22 text-anchor=%22middle%22>&gt;_</text></svg>" />
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        darkMode: 'class',
+        darkMode: "class",
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
-              display: ['Outfit', 'sans-serif'],
+              sans: ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+              display: ["Outfit", "sans-serif"],
             },
             colors: {
-              primary: '#6366f1', // Indigo 500
-              secondary: '#06b6d4', // Cyan 500
-              
-              dark: '#09090b', // Zinc 950
-              'dark-secondary': '#18181b', // Zinc 900
-              
-              light: '#f8fafc', // Slate 50
-              'light-secondary': '#ffffff',
-              
-              success: '#10B981',
+              primary: "#6366f1", // Indigo 500
+              secondary: "#06b6d4", // Cyan 500
+
+              dark: "#09090b", // Zinc 950
+              "dark-secondary": "#18181b", // Zinc 900
+
+              light: "#f8fafc", // Slate 50
+              "light-secondary": "#ffffff",
+
+              success: "#10B981",
             },
             backgroundImage: {
-              'hero-glow': 'conic-gradient(from 180deg at 50% 50%, #6366f133 0deg, #06b6d433 180deg, #6366f133 360deg)',
-              'gradient-primary': 'linear-gradient(to right, #6366f1, #06b6d4)',
-            }
-          }
-        }
-      }
+              "hero-glow":
+                "conic-gradient(from 180deg at 50% 50%, #6366f133 0deg, #06b6d433 180deg, #6366f133 360deg)",
+              "gradient-primary": "linear-gradient(to right, #6366f1, #06b6d4)",
+            },
+          },
+        },
+      };
     </script>
     <style>
       /* Otimização de renderização de fonte */
       body {
-        transition: background-color 0.4s ease, color 0.4s ease;
+        transition:
+          background-color 0.4s ease,
+          color 0.4s ease;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-rendering: optimizeLegibility;
       }
+
+      /* =========================================
+         OTIMIZAÇÕES DE PERFORMANCE (Mobile & Desktop)
+         ========================================= */
       
-      .scrollbar-hide::-webkit-scrollbar {
-          display: none;
+      /* Aceleração de Hardware para animações suaves */
+      .transform-gpu, 
+      .animate-fade-in, 
+      .animate-slide-up {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+        will-change: transform, opacity;
       }
-      .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
+
+      /* Renderização de Imagem Otimizada */
+      img {
+        content-visibility: auto; /* O browser decide quando renderizar */
+        contain: paint; /* Isola a pintura da imagem */
+      }
+
+      /* Reduzir complexidade de repintura em scroll */
+      section {
+        contain: content; /* Otimiza o cálculo de layout para seções fora da tela */
+      }
+
+      /* Desativar efeitos pesados em mobile (Low Power Mode simulado) */
+      @media (max-width: 768px) {
+        * {
+          backdrop-filter: none !important; /* Remove blur (vidro) no mobile que causa Lag */
+          box-shadow: none !important; /* Remove sombras complexas */
+          animation-duration: 0.5s !important; /* Acelera animações */
+        }
+        
+        /* Restaura sombras essenciais mas simplificadas se necessário */
+        .mobile-shadow {
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+        }
+      }
+
+      /* Ocultar barra de rolagem globalmente */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+        display: none;
+      }
+
+      html {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
       }
 
       /* Grid Pattern Otimizado */
       .bg-grid-pattern {
         background-size: 25px 25px;
-        background-image: 
-          linear-gradient(to right, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(99, 102, 241, 0.03) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(99, 102, 241, 0.03) 1px,
+            transparent 1px
+          );
       }
-      
+
       .dark .bg-grid-pattern {
-        background-image: 
-          linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px
+          );
       }
 
       @keyframes shimmer {
-        0% { background-position: 200% center; }
-        100% { background-position: -200% center; }
+        0% {
+          background-position: 200% center;
+        }
+        100% {
+          background-position: -200% center;
+        }
       }
-      
+
       .animate-shimmer {
         background: linear-gradient(
-          to right, 
-          #6366f1 20%, 
-          #06b6d4 40%, 
-          #06b6d4 60%, 
+          to right,
+          #6366f1 20%,
+          #06b6d4 40%,
+          #06b6d4 60%,
           #6366f1 80%
         );
         background-size: 200% auto;
@@ -95,8 +169,8 @@
       }
     </style>
 
-  <link rel="stylesheet" href="/index.css">
-</head>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>

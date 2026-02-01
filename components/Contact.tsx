@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
       
       {/* Container principal com borda e arredondamento */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-5 gap-12 
-                      rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-white/10">
+                      md:rounded-3xl p-0 md:p-12 md:border md:border-slate-200 md:dark:border-white/10">
         
         {/* --- COLUNA ESQUERDA: Links Sociais (Ocupa 2/5 do espaço em desktop) --- */}
         <div className="md:col-span-2 space-y-6">
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
         </div>
 
         {/* --- COLUNA DIREITA: Formulário (Ocupa 3/5 do espaço em desktop) --- */}
-        <div className="md:col-span-3 rounded-2xl p-6 md:p-8 border border-slate-100 dark:border-white/5">
+        <div className="md:col-span-3 md:rounded-2xl p-0 md:p-8 md:border md:border-slate-100 md:dark:border-white/5">
           {/* PreventDefault impede o recarregamento da página ao enviar */}
           <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
             

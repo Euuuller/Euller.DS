@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from './Section';
 import { motion } from 'framer-motion';
-import { GraduationCap, LineChart, Download } from 'lucide-react';
+import { GraduationCap, Target, Code, Download } from 'lucide-react';
 import Button from './Button';
 
 /**
@@ -62,28 +62,39 @@ const About: React.FC = () => {
             processos e criação de dashboards que auxiliam na tomada de decisão estratégica.
           </p>
 
-          {/* Cards de Destaque (Formação e Foco) - Visível apenas em Telas maiores que 'sm' */}
-          <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 w-full">
+          {/* Cards de Destaque (Repositórios, Foco e Formação) - Visível apenas em Telas maiores que 'sm' */}
+          <div className="hidden sm:grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 w-full">
             
+             {/* Card Repositórios */}
+             <div className="p-4 rounded-xl border border-slate-200 dark:border-white/5 flex flex-col items-center gap-3 shadow-sm hover:border-indigo-500/30 transition-colors bg-white/50 dark:bg-white/5">
+              <div className="p-2 bg-blue-50 dark:bg-blue-500/10 rounded-lg text-blue-600 dark:text-blue-400">
+                <Code size={24} />
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900 dark:text-white">Repositórios</h4>
+                <p className="text-sm text-slate-500 dark:text-slate-400">5+ Projetos Públicos</p>
+              </div>
+            </div>
+
+            {/* Card Foco */}
+            <div className="p-4 rounded-xl border border-slate-200 dark:border-white/5 flex flex-col items-center gap-3 shadow-sm hover:border-indigo-500/30 transition-colors bg-white/50 dark:bg-white/5">
+              <div className="p-2 bg-cyan-50 dark:bg-cyan-500/10 rounded-lg text-cyan-600 dark:text-cyan-400">
+                <Target size={24} />
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-900 dark:text-white">Foco Principal</h4>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Engenharia de Dados & BI</p>
+              </div>
+            </div>
+
             {/* Card Formação */}
-            <div className="p-4 rounded-xl border border-slate-200 dark:border-white/5 flex flex-col items-center gap-3 shadow-sm">
+            <div className="p-4 rounded-xl border border-slate-200 dark:border-white/5 flex flex-col items-center gap-3 shadow-sm hover:border-indigo-500/30 transition-colors bg-white/50 dark:bg-white/5">
               <div className="p-2 bg-indigo-50 dark:bg-indigo-500/10 rounded-lg text-indigo-600 dark:text-indigo-400">
                 <GraduationCap size={24} />
               </div>
               <div>
                 <h4 className="font-semibold text-slate-900 dark:text-white">Formação</h4>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Engenharia Elétrica (IFMA)</p>
-              </div>
-            </div>
-
-            {/* Card Foco */}
-            <div className="p-4 rounded-xl border border-slate-200 dark:border-white/5 flex flex-col items-center gap-3 shadow-sm">
-              <div className="p-2 bg-cyan-50 dark:bg-cyan-500/10 rounded-lg text-cyan-600 dark:text-cyan-400">
-                <LineChart size={24} />
-              </div>
-              <div>
-                <h4 className="font-semibold text-slate-900 dark:text-white">Foco</h4>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Data Science & BI</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Eng. Elétrica (IFMA)</p>
               </div>
             </div>
           </div>

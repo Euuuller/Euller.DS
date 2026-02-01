@@ -16,7 +16,7 @@ import TypewriterText from './TypewriterText';
  */
 const Hero: React.FC = memo(() => {
   // Array de textos para o efeito de digitação automática
-  const roles = ["Analista de Dados", "Data Analyst", "Futuro Engenheiro"];
+  const roles = ["Analista de Dados", "Data Analyst"];
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden z-10">
@@ -48,6 +48,7 @@ const Hero: React.FC = memo(() => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold font-display tracking-tight mb-6 text-slate-900 dark:text-white"
           >
+            <span className="text-primary mr-3 md:mr-5 inline-block">&gt;_</span>
             <span>Euller</span>
             <span className="animate-shimmer">.DS</span>
           </motion.h1>

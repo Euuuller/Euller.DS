@@ -83,7 +83,7 @@ const ProjectCard: React.FC<ProjectCardProps> = memo(({ project, index, onClick 
           transition={{ duration: 0.5 }}
           
           // Efeito de zoom suave na imagem quando passa o mouse no card (group-hover)
-          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+          className="w-full h-full object-cover transform md:group-hover:scale-105 transition-transform duration-700 ease-out"
         />
 
         {/* Skeleton Loader: Caixa cinza pulsante mostrada enquanto a imagem não carrega */}
@@ -126,14 +126,16 @@ const ProjectCard: React.FC<ProjectCardProps> = memo(({ project, index, onClick 
 
         {/* Métricas (se existirem) - Ex: Acurácia 99% */}
         {project.metrics && (
-          <div className="flex items-center justify-between gap-4 mb-6 px-2">
+          <div className="grid grid-cols-2 gap-4 mb-6">
             {project.metrics.map((metric, i) => (
               <div key={i} className="flex flex-col items-center">
-                <div className="flex items-center gap-1.5 text-slate-500 dark:text-gray-400 mb-1">
+                <div className="flex items-center gap-2 mb-1">
                   <div className="text-primary">{metric.icon}</div>
-                  <span className="text-[10px] uppercase tracking-wider font-bold">{metric.label}</span>
+                  <span className="text-[10px] md:text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                    {metric.label}
+                  </span>
                 </div>
-                <div className="text-xl font-bold text-slate-900 dark:text-white font-display">
+                <div className="text-2xl font-bold text-slate-900 dark:text-white font-display">
                   {metric.value}
                 </div>
               </div>
