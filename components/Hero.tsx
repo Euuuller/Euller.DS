@@ -70,10 +70,10 @@ const Hero: React.FC = memo(() => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mb-12 leading-relaxed"
           >
-            Transformo dados brutos em inteligência de negócio. Especialista em 
-            <span className="text-indigo-600 dark:text-indigo-400 font-medium"> Machine Learning</span>, 
-            <span className="text-indigo-600 dark:text-indigo-400 font-medium"> Análise Estatística</span> e 
-            <span className="text-indigo-600 dark:text-indigo-400 font-medium"> Visualização de Dados</span>.
+            Olá, seja muito bem-vindo ao meu portfólio de projetos!<br/>Fique à vontade para explorar o
+            <span className="text-indigo-600 dark:text-indigo-400 font-medium"> portfólio</span> e entrar em
+            <span className="text-indigo-600 dark:text-indigo-400 font-medium"> contato</span> pelos  
+            <span className="text-indigo-600 dark:text-indigo-400 font-medium"> links</span> ao final da página.
           </motion.p>
 
           {/* Botões de Ação (CTA) */}
