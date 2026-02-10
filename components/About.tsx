@@ -52,14 +52,10 @@ const About: React.FC = () => {
             Analista de Dados & Graduando em Engenharia
           </h3>
           <p className="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-            Olá! Sou Euller dos Santos Rodrigues Duarte. Minha paixão reside na interseção entre 
-            Engenharia e Ciência de Dados. Atualmente graduando em Engenharia Elétrica no IFMA, 
-            aplico o rigor matemático e o pensamento sistêmico da engenharia para resolver 
-            problemas complexos de dados.
+            Graduando em Engenharia Elétrica (IFMA) com forte base analítica voltada para Ciência de Dados. <strong className="font-semibold text-indigo-600 dark:text-indigo-400">Transformo dados brutos em inteligência de negócio</strong>, dominando SQL, Python, Power BI e Estatística aplicada à resolução de problemas reais.
           </p>
           <p className="text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-            Tenho experiência prática em desenvolvimento de modelos preditivos, automação de 
-            processos e criação de dashboards que auxiliam na tomada de decisão estratégica.
+            Desenvolvo soluções de <strong className="font-semibold text-indigo-600 dark:text-indigo-400">Business Intelligence</strong> com foco em impacto, incluindo Segmentação de Clientes (RFM), Análise de Cohort e Modelagem Preditiva. Busco Estágio em Dados para aplicar rigor matemático e visão estratégica na otimização de resultados.
           </p>
 
           {/* Cards de Destaque (Repositórios, Foco e Formação) - Visível apenas em Telas maiores que 'sm' */}
@@ -83,7 +79,7 @@ const About: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-slate-900 dark:text-white">Foco Principal</h4>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Engenharia de Dados & BI</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Análise de Dados & BI</p>
               </div>
             </div>
 
