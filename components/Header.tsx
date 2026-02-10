@@ -38,7 +38,7 @@ const Header: React.FC = () => {
         {/* LOGO */}
         <a href="#" className="text-2xl font-display font-bold text-slate-900 dark:text-white flex items-center gap-1">
           <span className="text-primary mr-1">&gt;_</span>
-          Euller<span className="text-primary">.DS</span>
+          Euller<span className="text-primary"> Duarte</span>
         </a>
 
         {/* --- NAVEGAÇÃO DESKTOP (escondida em mobile 'hidden md:flex') --- */}

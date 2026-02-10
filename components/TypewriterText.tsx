@@ -8,6 +8,7 @@ interface TypewriterTextProps {
   typingSpeed?: number;      // Velocidade de digitação (ms por letra)
   deletingSpeed?: number;    // Velocidade de apagar (ms por letra)
   pauseTime?: number;        // Tempo de pausa antes de começar a apagar (ms)
+  className?: string;        // Classes CSS adicionais para estilização
 }
 
 /**
@@ -20,7 +21,8 @@ const TypewriterText: React.FC<TypewriterTextProps> = memo(({
   words, 
   typingSpeed = 100, 
   deletingSpeed = 50, 
-  pauseTime = 2000 
+  pauseTime = 2000,
+  className = ''
 }) => {
   // Estado para armazenar o texto que está visível na tela agora
   const [displayText, setDisplayText] = useState('');
@@ -77,7 +79,7 @@ const TypewriterText: React.FC<TypewriterTextProps> = memo(({
   }, [displayText, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseTime]);
 
   return (
-    <span className="text-2xl md:text-4xl lg:text-5xl font-mono text-slate-500 dark:text-slate-400 inline-block min-h-[1.5em]">
+    <span className={`text-4xl md:text-5xl lg:text-6xl font-bold font-display inline-block min-h-[1.5em] ${className}`}>
       {/* Texto estilo 'tag' HTML */}
       &lt;{displayText}
       {/* Cursor piscante (caret/cursor) */}

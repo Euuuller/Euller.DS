@@ -50,7 +50,7 @@ const Hero: React.FC = memo(() => {
           >
             {/*<span className="text-primary mr-3 md:mr-5 inline-block">&gt;_</span>*/}
             <span>Euller</span>
-            <span className="animate-shimmer">.DS</span>
+            <span className="text-primary"> Duarte</span>
           </motion.h1>
 
           {/* Componente de Texto Datilografado (que fica trocando os textos de 'roles') */}
@@ -58,9 +58,9 @@ const Hero: React.FC = memo(() => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="h-12 md:h-16 mb-8 flex items-center justify-center"
+            className="h-16 md:h-20 lg:h-24 mb-8 flex items-center justify-center"
           >
-            <TypewriterText words={roles} />
+            <TypewriterText words={roles} className="animate-shimmer" />
           </motion.div>
 
           {/* Descrição Curta */}
