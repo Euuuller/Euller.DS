@@ -16,16 +16,16 @@ export const SOCIAL_LINKS: SocialLink[] = [
     url: 'mailto:euller.santos.duarte@gmail.com',
     handle: 'euller.santos.duarte',
     icon: <Mail className="w-5 h-5" />,
-    color: 'text-indigo-500 dark:text-indigo-400',
-    bg: 'bg-indigo-50 dark:bg-indigo-500/10 border-indigo-100 dark:border-indigo-500/20 group-hover:border-indigo-500/50'
+    color: 'text-red-500 dark:text-red-400',
+    bg: 'bg-red-50 dark:bg-red-500/10 border-red-100 dark:border-red-500/20 group-hover:border-red-500/50'
   },
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/euuuller',
     handle: '/in/euuuller',
     icon: <Linkedin className="w-5 h-5" />,
-    color: 'text-sky-600 dark:text-sky-400',
-    bg: 'bg-sky-50 dark:bg-sky-500/10 border-sky-100 dark:border-sky-500/20 group-hover:border-sky-500/50'
+    color: 'text-blue-600 dark:text-blue-400',
+    bg: 'bg-blue-50 dark:bg-blue-500/10 border-blue-100 dark:border-blue-500/20 group-hover:border-blue-500/50'
   },
   {
     name: 'GitHub',
@@ -34,15 +34,15 @@ export const SOCIAL_LINKS: SocialLink[] = [
     icon: <Github className="w-5 h-5" />,
     // Github limpo: Preto no light, Branco no dark
     color: 'text-slate-900 dark:text-white', 
-    bg: 'bg-slate-100 dark:bg-white/5 border-slate-200 dark:border-white/10 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-colors'
+    bg: 'bg-white dark:bg-black border-black dark:border-white group-hover:bg-slate-50 dark:group-hover:bg-slate-900 transition-colors'
   },
   {
     name: 'Medium',
     url: 'https://medium.com/@euller.santos.duarte',
     handle: '@euller.duarte',
     icon: <BookOpen className="w-5 h-5" />,
-    color: 'text-emerald-600 dark:text-emerald-400',
-    bg: 'bg-emerald-50 dark:bg-emerald-500/10 border-emerald-100 dark:border-emerald-500/20 group-hover:border-emerald-500/50'
+    color: 'text-orange-600 dark:text-orange-400',
+    bg: 'bg-orange-50 dark:bg-orange-500/10 border-orange-100 dark:border-orange-500/20 group-hover:border-orange-500/50'
   }
 ];
 
